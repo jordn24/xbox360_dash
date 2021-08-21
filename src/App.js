@@ -2,13 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { Helmet } from "react-helmet";
 import profile_pic from './assets/images/profile_pic.png'
-import caro_1 from './assets/images/black-ops2.png'
-import caro_2 from './assets/images/halo.png'
-import caro_3 from './assets/images/fifa.png'
-import myPins_ico from './assets/images/my_pins.png'
-import recent_ico from './assets/images/recent.png'
 import a_btn_icn from './assets/images/a_icon.png'
-
+import price_tracker from './assets/images/price_tracker.png'
+import email_tile from './assets/images/email_tile.png'
+import portfolio_tile from './assets/images/portfolio_tile.png'
+import blue_bg from './assets/images/blue_bg.png'
+import red_bg from './assets/images/red_bg.png'
+import brown_bg from './assets/images/brown_bg.png'
+import green_bg from './assets/images/green_bg.png'
+import purple_bg from './assets/images/purple_bg.png'
+import youtube_bg from './assets/images/youtube_logo.png'
 
 function App() {
   return (
@@ -36,22 +39,22 @@ function App() {
                 <a class="nav-link active" href="#">home</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">social</a>
+                <a class="nav-link" href="#">jordan sposito</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">games</a>
+                <a class="nav-link" href="#">projects</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">tv & movies</a>
+                <a class="nav-link" href="#">react-js</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">music</a>
+                <a class="nav-link" href="#">python</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">apps</a>
+                <a class="nav-link" href="#">javascript</a>
               </li>
               <li class="nav-item px-4">
-                <a class="nav-link" href="#">settings</a>
+                <a class="nav-link" href="#">discord-js</a>
               </li>
             </ul>
           </div>
@@ -64,56 +67,96 @@ function App() {
 
         </div>
         {/* Left Column Content */}
-        <div className="col-2 px-1">
-          <div className="row py-1">
-            <div className="col">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
-            </div>
+        <div className="col-2">
+          {/* Project Tile */}
+          <div className="row">
+              <div class="card border-secondary text-white bg-dark p-0">
+                <img src={price_tracker} className="card-img-top" alt="project"></img>
+                <div className="card-body p-0">
+                  <p className="card-text ms-2 fs-2">Price Tracker Bot</p>
+                </div>
+              </div>
           </div>
+          {/* Projects Tile */}
           <div className="row py-1">
-            <div className="col">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
-            </div>
+            <div class="card border-secondary text-white bg-dark p-0">
+                <img src={portfolio_tile} className="card-img-top" alt="project"></img>
+                <div className="card-body p-0" style={{background:'#0da409'}}>
+                  <p className="card-text ms-2 fs-2">Projects</p>
+                </div>
+              </div>
           </div>
-          <div className="row py-1">
-            <div className="col ">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
+          {/* Email Me Tile */}
+          <div className="row">
+            <div class="card border-secondary text-white bg-dark p-0">
+                <img src={email_tile} className="card-img-top" alt="project"></img>
+                <div className="card-body p-0" style={{background:'#0da409'}}>
+                  <p className="card-text ms-2 fs-2">Email Me</p>
+                </div>
             </div>
           </div>
         </div>
         {/* Middle Column Content */}
-        <div className="col-4 px-1">
-          <div className="row py-1">
-            <div className="col">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
+        <div className="col-4">
+          {/* Large Project Tile */}
+          <div className="row px-1">
+            <div class="card border-secondary text-white bg-dark p-0" style={{height:'28.95rem'}}>
+                <img src={blue_bg} className="card-img-top" alt="project"></img>
+                <div className="card-body d-flex p-0 align-items-center">
+                  <p className="card-text ms-3 fs-1">Jordan Sposito - Portfolio</p>
+                </div>
             </div>
           </div>
-          <div className="row mt-2">
-            <div className="col pe-1">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
+          {/* Bottom Middle Tiles */}
+          <div className="row pt-1">
+            {/* Project Tile */}
+            <div className="col-6 ps-1 p-0">
+              <div class="card border-secondary text-white bg-dark p-0">
+                  <img src={red_bg} className="card-img-top" alt="project"></img>
+                  <div className="card-body p-0">
+                    <p className="card-text ms-2 fs-2">Project</p>
+                  </div>
+               </div>
             </div>
-            <div className="col ps-1">
-              <img className="img-fluid" src={caro_1} alt="preview"></img>
+            {/* Project Tile */}
+            <div className="col-6 pe-1 p-0">
+              <div class="card border-secondary text-white bg-dark p-0">
+                    <img src={purple_bg} className="card-img-top" alt="project"></img>
+                    <div className="card-body p-0">
+                      <p className="card-text ms-2 fs-2">Project</p>
+                    </div>
+              </div>
             </div>
           </div>
         </div>
         {/* Right Column Content */}
-        <div className="col-2 px-1">
+        <div className="col-2">
+          {/* Project Tile */}
+            <div className="row">
+              <div class="card border-secondary text-white bg-dark p-0">
+                      <img src={brown_bg} className="card-img-top" alt="project"></img>
+                      <div className="card-body p-0">
+                        <p className="card-text ms-2 fs-2">Project</p>
+                      </div>
+                </div>            
+             </div>
+            {/* Project Tile */}
             <div className="row py-1">
-              <div className="col">
-                <img className="img-fluid" src={caro_1} alt="preview"></img>
-              </div>
+              <div class="card border-secondary text-white bg-dark p-0">
+                      <img src={red_bg} className="card-img-top" alt="project"></img>
+                      <div className="card-body p-0">
+                        <p className="card-text ms-2 fs-2">Project</p>
+                      </div>
+               </div>                
             </div>
-            <div className="row py-1">
-              <div className="col">
-                <img className="img-fluid" src={caro_1} alt="preview"></img>
-              </div>
-            </div>
-            <div className="row py-1">
-              <div className="col">
-                <img className="img-fluid" src={caro_1} alt="preview"></img>
-              </div>
-            </div>
+            {/* Project Tile */}
+            <div className="row">
+              <div class="card border-secondary text-white bg-dark p-0">
+                      <img src={youtube_bg} className="card-img-top" alt="project"></img>
+                      <div className="card-body p-0">
+                        <p className="card-text ms-2 fs-2">Project</p>
+                      </div>
+               </div>                </div>
         </div>
         {/* Right Side Content */}
         <div className="col-2 col-sm-2">
