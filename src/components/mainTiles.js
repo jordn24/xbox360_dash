@@ -12,17 +12,17 @@ import youtube_bg from '../assets/images/youtube_logo.png'
 
 const MainTiles = () => {
     return (
-        <div className="row mt-3">
+        <div className="row mt-5">
         {/* Left Side Content */}
         <Side_Preview />
         {/* Left Column Content */}
-        <div className="col-2">
+        <div className="col-xl-2 col-lg-2 col-12 p-xs-0">
           {/* Project Tile */}
           <div className="row">
               <div class="card border-secondary text-white bg-dark p-0">
                 <img src={price_tracker} className="card-img-top" alt="project"></img>
                 <div className="card-body p-0">
-                  <p className="card-text ms-2 fs-2">Price Tracker Bot</p>
+                  <p className="card-text ms-2 fs-2">Finance Bot</p>
                 </div>
               </div>
           </div>
@@ -46,13 +46,13 @@ const MainTiles = () => {
           </div>
         </div>
         {/* Middle Column Content */}
-        <div className="col-4">
+        <div className="col-xl-4 col-lg-4 col-12 d-none	d-sm-none d-md-none d-lg-block">
           {/* Large Project Tile */}
           <div className="row px-1">
-            <div class="card border-secondary text-white bg-dark p-0" style={{height:'28.95rem'}}>
+            <div class="card border-secondary text-white bg-dark p-0">
                 <img src={blue_bg} className="card-img-top" alt="project"></img>
-                <div className="card-body d-flex p-0 align-items-center">
-                  <p className="card-text ms-3 fs-1">Jordan Sposito - Portfolio</p>
+                <div className="card-body p-4">
+                  <p className="card-text ms-2 fs-1">Jordan Sposito</p>
                 </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ const MainTiles = () => {
           </div>
         </div>
         {/* Right Column Content */}
-        <div className="col-2">
+        <div className="col-xl-2 col-lg-2 col-12 d-none	d-sm-none d-md-none d-lg-block">
           {/* Project Tile */}
             <div className="row">
               <div class="card border-secondary text-white bg-dark p-0">
