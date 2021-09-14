@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.box {
+  background-image: linear-gradient(
+    to bottom,
+    #484b4d,
+    #606264,
+    #78797b,
+    #919293,
+    #ababac,
+    #afafaf,
+    #b2b2b3,
+    #b6b6b6,
+    #a4a4a4,
+    #939393,
+    #828282,
+    #717171
+  );
+}
+
+.search-grad {
+  background-image: linear-gradient(
+    to left bottom,
+    #545454,
+    #5b5b5b,
+    #636363,
+    #6a6a6a,
+    #727272
+  );
+}

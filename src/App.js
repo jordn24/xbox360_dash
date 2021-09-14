@@ -4,10 +4,10 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './assets/css/main.css';
 
 import { Helmet } from "react-helmet";
-import Header from "./components/header";
-import NavBar from './components/navbar';
-import Footer_Bar from './components/footer_bar';
-import MainTiles from './components/mainTiles';
+import Header from "../frontend/src/components/header";
+import NavBar from '../frontend/src/components/navbar';
+import Footer_Bar from '../frontend/src/components/footer_bar';
+import MainTiles from '../frontend/src/components/mainTiles';
 
 
 
