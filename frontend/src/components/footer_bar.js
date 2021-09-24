@@ -4,7 +4,7 @@ import tap_btn from '../assets/images/tap_btn.png'
 
 const Footer_Bar = () => {
     return (
-        <div className="row mt-5">
+        <div className="row mt-4">
             <div className="col-1 pe-0 	d-none	d-sm-none d-md-none d-lg-none d-xl-block">
                 <img className="img-fluid float-end" src={left_click_btn} width="35" alt="Left Click"></img>
             </div>
