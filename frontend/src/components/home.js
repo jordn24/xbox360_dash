@@ -1,6 +1,12 @@
 import React from 'react';
-import Side_Preview_left from './side_preview_left';
-import Side_Preview_right from './side_preview_right';
+import {motion} from 'framer-motion/dist/framer-motion'
+
+// Components
+import SidePreviewleft from './side_preview_left';
+import SidePreviewright from './side_preview_right';
+import Tile from './tile'
+
+// Images
 import email_tile from '../assets/images/email_tile.png'
 import portfolio_tile from '../assets/images/portfolio_tile.png'
 import red_bg from '../assets/images/red_bg.png'
@@ -9,13 +15,42 @@ import purple_bg from '../assets/images/purple_bg.png'
 import youtube_bg from '../assets/images/youtube_logo.png'
 import black_ops from '../assets/images/black-ops2.png'
 
-import Tile from './tile'
+const Home = (props) => {
 
-const mainSection = () => {
+    const leftDir = "-100vw"
+
+    const pageVariants = {
+      initial: {
+        opacity: 0.5,
+        x: leftDir,
+        scale: 1,
+      },
+      in: {
+        opacity: 1,
+        x: 0,
+        scale: 1
+      },
+      out: {
+        opacity: 0,
+        x: leftDir
+      }
+    };
+    
+    const pageTransition = {
+      ease: "linear",
+      duration: 0.2
+    };
+    
     return (
-        <div className="row mt-3">
+        <motion.div 
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}                
+        className="row mt-3">
         {/* Left Side Content */}
-        <Side_Preview_left />
+        <SidePreviewleft context="home"/>
         {/* Left Column Content */}
         <div className="col-xl-2 col-lg-2 col-12 p-xs-0">
           {/* Project Tile */}
@@ -28,7 +63,7 @@ const mainSection = () => {
           </div>
           {/* Email Me Tile */}
           <div className="row">
-            <Tile title="Email Me" colour="rgb(0, 0, 0, 0)" thumbnail={email_tile} />
+            <Tile title="Contact Me" colour="rgb(0, 0, 0, 0)" thumbnail={email_tile} />
           </div>
         </div>
         {/* Middle Column Content */}
@@ -65,9 +100,9 @@ const mainSection = () => {
             </div>
         </div>
         {/* Right Side Content */}
-        <Side_Preview_right />
-      </div>
+        <SidePreviewright context="home" />
+        </motion.div>
     );
 };
 
-export default mainSection;
+export default Home;
