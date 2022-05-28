@@ -1,25 +1,24 @@
-import app from "./server.js"
-import mongodb from "mongodb"
-import dotenv from "dotenv"
-import ProjectsDAO from "./dao/projectsDAO.js"
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const routesHandler = require('./routes/handler.js');
+require('dotenv/config');
 
-dotenv.config()
-const MongoClient = mongodb.MongoClient
+const app = express();
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+app.use('/', routesHandler);
 
-const port = process.env.PORT || 8000
-
-MongoClient.connect(
-    process.env.MYPORTFOLIO_DB_URI,
-    {
-        maxPoolSize: 50
-    }
-).catch(err => {
-    console.error(err.stack)
-    process.exit(1)
+// DB Connection
+mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
+.then ( () => {
+    console.log("Connected!")
 })
-.then(async client => {
-    await ProjectsDAO.injectDB(client)
-    app.listen(port, () => {
-        console.log(`listening on port ${port}`)
-    })
+.catch ( (err) => {
+    console.log(err)
+})
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 })

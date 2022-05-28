@@ -2,6 +2,19 @@ html,
 body {
   margin: 0;
   height: 100%;
+  overflow: hidden;
+}
+
+li {
+  cursor: pointer;
+}
+
+.stopOverflow {
+  overflow: hidden;
+}
+
+.loadingMargin {
+  margin-top: 15rem;
 }
 
 .box {
@@ -37,4 +50,7 @@ body {
   font-size: 300%;
 }
 
+.static-bg {
+    background-image: url('../images/static_bg.jpeg');
+}
 
